@@ -8,7 +8,7 @@ const HOSTED_URLS = {
 
 const examples = {
   'example1':
-      'Alice was beginning to get very tired of sitting by her sister on the bank.',
+      'I thought too ill of him to invite him to Pemberley, or admit his society in town.',
   'example2':
       'Buda-Pesth seems a wonderful place.',
   'example3':
