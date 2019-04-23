@@ -6,6 +6,13 @@ const HOSTED_URLS = {
       'model_js/metadata.json'
 };
 
+const classNames = [
+  'Pride And Prejudice',
+  'Dracula',
+  'The Iliad',
+  'Heart of Darkness'
+]
+
 const examples = {
   'example1':
       'I thought too ill of him to invite him to Pemberley, or admit his society in town.',
@@ -49,9 +56,9 @@ function doPredict(predict) {
   const result = predict(textField.value);
   score_string = "Class scores: ";
   for (var x in result.score) {
-    score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
+    score_string += classNames[x] + " ->  " + result.score[x].toFixed(3) + ", "
   }
-  //console.log(score_string);
+
   status(
       score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)');
 }

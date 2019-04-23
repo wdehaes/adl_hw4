@@ -1,5 +1,14 @@
 
 <!doctype html>
+<head>
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+
+<link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+
+<link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+</head>
 
 <body>
   <style>
@@ -8,11 +17,16 @@
       width: 60%;
       height: 200px;
     }
+    body {
+      margin: 5%;
+    }
   </style>
   <h1>
-    Title
+    Which classic?
   </h1>
   <hr>
+  <p>Click on 'Load Model' to load a simple deep neural model (2 Dense layers) built in Tensorflow and Keras.</p>
+  <p>Next, start typing a sentence and see in which of the four classics would be most likely to contain it. You can also select a sentence from each of the classics using the dropdown menu.</p>
   <div class="create-model">
     <button id="load-model" style="display:none">Load model</button>
   </div>
@@ -20,10 +34,12 @@
     <div>
       <span>Vocabulary size: </span>
       <span id="vocabularySize"></span>
+      <span> (the model only takes into account the most common words)</span>
     </div>
     <div>
       <span>Max length: </span>
       <span id="maxLen"></span>
+      <span> (the max length of a sentence)</span>
     </div>
   </div>
   <hr>
